@@ -1,0 +1,1814 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="project_projx.xsd">
+
+  <SchemaVersion>2.1</SchemaVersion>
+
+  <Header>### uVision Project, (C) Keil Software</Header>
+
+  <Targets>
+    <Target>
+      <TargetName>MBAUSB</TargetName>
+      <ToolsetNumber>0x4</ToolsetNumber>
+      <ToolsetName>ARM-ADS</ToolsetName>
+      <TargetOption>
+        <TargetCommonOption>
+          <Device>STM32F405RGTx</Device>
+          <Vendor>STMicroelectronics</Vendor>
+          <PackID>Keil.STM32F4xx_DFP.2.4.0</PackID>
+          <PackURL>http://www.keil.com/pack</PackURL>
+          <Cpu>IROM(0x08000000,0x100000) IRAM(0x20000000,0x20000) IRAM2(0x10000000,0x10000) CPUTYPE("Cortex-M4") FPU2 CLOCK(12000000) ELITTLE</Cpu>
+          <FlashUtilSpec></FlashUtilSpec>
+          <StartupFile></StartupFile>
+          <FlashDriverDll>UL2CM3(-S0 -C0 -P0 -FD20000000 -FC1000 -FN1 -FF0STM32F4xx_1024 -FS08000000 -FL0100000 -FP0($$Device:STM32F405RGTx$CMSIS/Flash/STM32F4xx_1024.FLM))</FlashDriverDll>
+          <DeviceId>0</DeviceId>
+          <RegisterFile>$$Device:STM32F405RGTx$Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h</RegisterFile>
+          <MemoryEnv></MemoryEnv>
+          <Cmp></Cmp>
+          <Asm></Asm>
+          <Linker></Linker>
+          <OHString></OHString>
+          <InfinionOptionDll></InfinionOptionDll>
+          <SLE66CMisc></SLE66CMisc>
+          <SLE66AMisc></SLE66AMisc>
+          <SLE66LinkerMisc></SLE66LinkerMisc>
+          <SFDFile>$$Device:STM32F405RGTx$CMSIS\SVD\STM32F40x.svd</SFDFile>
+          <bCustSvd>0</bCustSvd>
+          <UseEnv>0</UseEnv>
+          <BinPath></BinPath>
+          <IncludePath></IncludePath>
+          <LibPath></LibPath>
+          <RegisterFilePath></RegisterFilePath>
+          <DBRegisterFilePath></DBRegisterFilePath>
+          <TargetStatus>
+            <Error>0</Error>
+            <ExitCodeStop>0</ExitCodeStop>
+            <ButtonStop>0</ButtonStop>
+            <NotGenerated>0</NotGenerated>
+            <InvalidFlash>1</InvalidFlash>
+          </TargetStatus>
+          <OutputDirectory>.\Output\</OutputDirectory>
+          <OutputName>MuBA</OutputName>
+          <CreateExecutable>1</CreateExecutable>
+          <CreateLib>0</CreateLib>
+          <CreateHexFile>1</CreateHexFile>
+          <DebugInformation>1</DebugInformation>
+          <BrowseInformation>1</BrowseInformation>
+          <ListingPath>.\Output\</ListingPath>
+          <HexFormatSelection>1</HexFormatSelection>
+          <Merge32K>0</Merge32K>
+          <CreateBatchFile>0</CreateBatchFile>
+          <BeforeCompile>
+            <RunUserProg1>0</RunUserProg1>
+            <RunUserProg2>0</RunUserProg2>
+            <UserProg1Name></UserProg1Name>
+            <UserProg2Name></UserProg2Name>
+            <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
+            <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
+            <nStopU1X>0</nStopU1X>
+            <nStopU2X>0</nStopU2X>
+          </BeforeCompile>
+          <BeforeMake>
+            <RunUserProg1>0</RunUserProg1>
+            <RunUserProg2>0</RunUserProg2>
+            <UserProg1Name></UserProg1Name>
+            <UserProg2Name></UserProg2Name>
+            <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
+            <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
+            <nStopB1X>0</nStopB1X>
+            <nStopB2X>0</nStopB2X>
+          </BeforeMake>
+          <AfterMake>
+            <RunUserProg1>0</RunUserProg1>
+            <RunUserProg2>0</RunUserProg2>
+            <UserProg1Name></UserProg1Name>
+            <UserProg2Name></UserProg2Name>
+            <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
+            <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
+          </AfterMake>
+          <SelectedForBatchBuild>0</SelectedForBatchBuild>
+          <SVCSIdString></SVCSIdString>
+        </TargetCommonOption>
+        <CommonProperty>
+          <UseCPPCompiler>0</UseCPPCompiler>
+          <RVCTCodeConst>0</RVCTCodeConst>
+          <RVCTZI>0</RVCTZI>
+          <RVCTOtherData>0</RVCTOtherData>
+          <ModuleSelection>0</ModuleSelection>
+          <IncludeInBuild>1</IncludeInBuild>
+          <AlwaysBuild>0</AlwaysBuild>
+          <GenerateAssemblyFile>0</GenerateAssemblyFile>
+          <AssembleAssemblyFile>0</AssembleAssemblyFile>
+          <PublicsOnly>0</PublicsOnly>
+          <StopOnExitCode>3</StopOnExitCode>
+          <CustomArgument></CustomArgument>
+          <IncludeLibraryModules></IncludeLibraryModules>
+          <ComprImg>1</ComprImg>
+        </CommonProperty>
+        <DllOption>
+          <SimDllName>SARMCM3.DLL</SimDllName>
+          <SimDllArguments> -REMAP -MPU</SimDllArguments>
+          <SimDlgDll>DCM.DLL</SimDlgDll>
+          <SimDlgDllArguments>-pCM4</SimDlgDllArguments>
+          <TargetDllName>SARMCM3.DLL</TargetDllName>
+          <TargetDllArguments> -MPU</TargetDllArguments>
+          <TargetDlgDll>TCM.DLL</TargetDlgDll>
+          <TargetDlgDllArguments>-pCM4</TargetDlgDllArguments>
+        </DllOption>
+        <DebugOption>
+          <OPTHX>
+            <HexSelection>1</HexSelection>
+            <HexRangeLowAddress>0</HexRangeLowAddress>
+            <HexRangeHighAddress>0</HexRangeHighAddress>
+            <HexOffset>0</HexOffset>
+            <Oh166RecLen>16</Oh166RecLen>
+          </OPTHX>
+          <Simulator>
+            <UseSimulator>0</UseSimulator>
+            <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
+            <RunToMain>1</RunToMain>
+            <RestoreBreakpoints>1</RestoreBreakpoints>
+            <RestoreWatchpoints>1</RestoreWatchpoints>
+            <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
+            <RestoreFunctions>1</RestoreFunctions>
+            <RestoreToolbox>1</RestoreToolbox>
+            <LimitSpeedToRealTime>0</LimitSpeedToRealTime>
+            <RestoreSysVw>1</RestoreSysVw>
+          </Simulator>
+          <Target>
+            <UseTarget>1</UseTarget>
+            <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
+            <RunToMain>1</RunToMain>
+            <RestoreBreakpoints>1</RestoreBreakpoints>
+            <RestoreWatchpoints>1</RestoreWatchpoints>
+            <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
+            <RestoreFunctions>0</RestoreFunctions>
+            <RestoreToolbox>1</RestoreToolbox>
+            <RestoreTracepoints>1</RestoreTracepoints>
+            <RestoreSysVw>1</RestoreSysVw>
+          </Target>
+          <RunDebugAfterBuild>0</RunDebugAfterBuild>
+          <TargetSelection>11</TargetSelection>
+          <SimDlls>
+            <CpuDll></CpuDll>
+            <CpuDllArguments></CpuDllArguments>
+            <PeripheralDll></PeripheralDll>
+            <PeripheralDllArguments></PeripheralDllArguments>
+            <InitializationFile></InitializationFile>
+          </SimDlls>
+          <TargetDlls>
+            <CpuDll></CpuDll>
+            <CpuDllArguments></CpuDllArguments>
+            <PeripheralDll></PeripheralDll>
+            <PeripheralDllArguments></PeripheralDllArguments>
+            <InitializationFile></InitializationFile>
+            <Driver>STLink\ST-LINKIII-KEIL_SWO.dll</Driver>
+          </TargetDlls>
+        </DebugOption>
+        <Utilities>
+          <Flash1>
+            <UseTargetDll>1</UseTargetDll>
+            <UseExternalTool>0</UseExternalTool>
+            <RunIndependent>0</RunIndependent>
+            <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
+            <Capability>1</Capability>
+            <DriverSelection>4096</DriverSelection>
+          </Flash1>
+          <bUseTDR>1</bUseTDR>
+          <Flash2>BIN\UL2CM3.DLL</Flash2>
+          <Flash3>"" ()</Flash3>
+          <Flash4></Flash4>
+          <pFcarmOut></pFcarmOut>
+          <pFcarmGrp></pFcarmGrp>
+          <pFcArmRoot></pFcArmRoot>
+          <FcArmLst>0</FcArmLst>
+        </Utilities>
+        <TargetArmAds>
+          <ArmAdsMisc>
+            <GenerateListings>0</GenerateListings>
+            <asHll>1</asHll>
+            <asAsm>1</asAsm>
+            <asMacX>1</asMacX>
+            <asSyms>1</asSyms>
+            <asFals>1</asFals>
+            <asDbgD>1</asDbgD>
+            <asForm>1</asForm>
+            <ldLst>0</ldLst>
+            <ldmm>1</ldmm>
+            <ldXref>1</ldXref>
+            <BigEnd>0</BigEnd>
+            <AdsALst>1</AdsALst>
+            <AdsACrf>1</AdsACrf>
+            <AdsANop>0</AdsANop>
+            <AdsANot>0</AdsANot>
+            <AdsLLst>1</AdsLLst>
+            <AdsLmap>1</AdsLmap>
+            <AdsLcgr>1</AdsLcgr>
+            <AdsLsym>1</AdsLsym>
+            <AdsLszi>1</AdsLszi>
+            <AdsLtoi>1</AdsLtoi>
+            <AdsLsun>1</AdsLsun>
+            <AdsLven>1</AdsLven>
+            <AdsLsxf>1</AdsLsxf>
+            <RvctClst>0</RvctClst>
+            <GenPPlst>0</GenPPlst>
+            <AdsCpuType>"Cortex-M4"</AdsCpuType>
+            <RvctDeviceName></RvctDeviceName>
+            <mOS>1</mOS>
+            <uocRom>0</uocRom>
+            <uocRam>0</uocRam>
+            <hadIROM>1</hadIROM>
+            <hadIRAM>1</hadIRAM>
+            <hadXRAM>0</hadXRAM>
+            <uocXRam>0</uocXRam>
+            <RvdsVP>2</RvdsVP>
+            <hadIRAM2>1</hadIRAM2>
+            <hadIROM2>0</hadIROM2>
+            <StupSel>8</StupSel>
+            <useUlib>1</useUlib>
+            <EndSel>0</EndSel>
+            <uLtcg>0</uLtcg>
+            <RoSelD>3</RoSelD>
+            <RwSelD>5</RwSelD>
+            <CodeSel>0</CodeSel>
+            <OptFeed>0</OptFeed>
+            <NoZi1>0</NoZi1>
+            <NoZi2>0</NoZi2>
+            <NoZi3>0</NoZi3>
+            <NoZi4>0</NoZi4>
+            <NoZi5>0</NoZi5>
+            <Ro1Chk>0</Ro1Chk>
+            <Ro2Chk>0</Ro2Chk>
+            <Ro3Chk>0</Ro3Chk>
+            <Ir1Chk>1</Ir1Chk>
+            <Ir2Chk>0</Ir2Chk>
+            <Ra1Chk>0</Ra1Chk>
+            <Ra2Chk>0</Ra2Chk>
+            <Ra3Chk>0</Ra3Chk>
+            <Im1Chk>1</Im1Chk>
+            <Im2Chk>0</Im2Chk>
+            <OnChipMemories>
+              <Ocm1>
+                <Type>0</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </Ocm1>
+              <Ocm2>
+                <Type>0</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </Ocm2>
+              <Ocm3>
+                <Type>0</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </Ocm3>
+              <Ocm4>
+                <Type>0</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </Ocm4>
+              <Ocm5>
+                <Type>0</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </Ocm5>
+              <Ocm6>
+                <Type>0</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </Ocm6>
+              <IRAM>
+                <Type>0</Type>
+                <StartAddress>0x20000000</StartAddress>
+                <Size>0x20000</Size>
+              </IRAM>
+              <IROM>
+                <Type>1</Type>
+                <StartAddress>0x8000000</StartAddress>
+                <Size>0x100000</Size>
+              </IROM>
+              <XRAM>
+                <Type>0</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </XRAM>
+              <OCR_RVCT1>
+                <Type>1</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </OCR_RVCT1>
+              <OCR_RVCT2>
+                <Type>1</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </OCR_RVCT2>
+              <OCR_RVCT3>
+                <Type>1</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </OCR_RVCT3>
+              <OCR_RVCT4>
+                <Type>1</Type>
+                <StartAddress>0x8000000</StartAddress>
+                <Size>0x100000</Size>
+              </OCR_RVCT4>
+              <OCR_RVCT5>
+                <Type>1</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </OCR_RVCT5>
+              <OCR_RVCT6>
+                <Type>0</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </OCR_RVCT6>
+              <OCR_RVCT7>
+                <Type>0</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </OCR_RVCT7>
+              <OCR_RVCT8>
+                <Type>0</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </OCR_RVCT8>
+              <OCR_RVCT9>
+                <Type>0</Type>
+                <StartAddress>0x20000000</StartAddress>
+                <Size>0x20000</Size>
+              </OCR_RVCT9>
+              <OCR_RVCT10>
+                <Type>0</Type>
+                <StartAddress>0x10000000</StartAddress>
+                <Size>0x10000</Size>
+              </OCR_RVCT10>
+            </OnChipMemories>
+            <RvctStartVector></RvctStartVector>
+          </ArmAdsMisc>
+          <Cads>
+            <interw>1</interw>
+            <Optim>1</Optim>
+            <oTime>0</oTime>
+            <SplitLS>0</SplitLS>
+            <OneElfS>0</OneElfS>
+            <Strict>0</Strict>
+            <EnumInt>0</EnumInt>
+            <PlainCh>0</PlainCh>
+            <Ropi>0</Ropi>
+            <Rwpi>0</Rwpi>
+            <wLevel>2</wLevel>
+            <uThumb>0</uThumb>
+            <uSurpInc>0</uSurpInc>
+            <uC99>0</uC99>
+            <useXO>0</useXO>
+            <VariousControls>
+              <MiscControls></MiscControls>
+              <Define>HSE_VALUE=25000000</Define>
+              <Undefine></Undefine>
+              <IncludePath>.;..\MuBA\SourceCode</IncludePath>
+            </VariousControls>
+          </Cads>
+          <Aads>
+            <interw>1</interw>
+            <Ropi>0</Ropi>
+            <Rwpi>0</Rwpi>
+            <thumb>0</thumb>
+            <SplitLS>0</SplitLS>
+            <SwStkChk>0</SwStkChk>
+            <NoWarn>0</NoWarn>
+            <uSurpInc>0</uSurpInc>
+            <useXO>0</useXO>
+            <VariousControls>
+              <MiscControls></MiscControls>
+              <Define></Define>
+              <Undefine></Undefine>
+              <IncludePath></IncludePath>
+            </VariousControls>
+          </Aads>
+          <LDads>
+            <umfTarg>1</umfTarg>
+            <Ropi>0</Ropi>
+            <Rwpi>0</Rwpi>
+            <noStLib>0</noStLib>
+            <RepFail>1</RepFail>
+            <useFile>0</useFile>
+            <TextAddressRange></TextAddressRange>
+            <DataAddressRange></DataAddressRange>
+            <pXoBase></pXoBase>
+            <ScatterFile></ScatterFile>
+            <IncludeLibs></IncludeLibs>
+            <IncludeLibsPath></IncludeLibsPath>
+            <Misc></Misc>
+            <LinkerInputFile></LinkerInputFile>
+            <DisabledWarnings></DisabledWarnings>
+          </LDads>
+        </TargetArmAds>
+      </TargetOption>
+      <Groups>
+        <Group>
+          <GroupName>APPLAYER</GroupName>
+          <Files>
+            <File>
+              <FileName>OSSupport.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\APPLAYER\OSSupport.c</FilePath>
+            </File>
+            <File>
+              <FileName>DeviceApp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\APPLAYER\DeviceInterface\DeviceApp.c</FilePath>
+            </File>
+            <File>
+              <FileName>BUSApp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\APPLAYER\Communication\BUSApp.c</FilePath>
+            </File>
+            <File>
+              <FileName>MBAApp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\APPLAYER\Communication\MBAApp.c</FilePath>
+            </File>
+            <File>
+              <FileName>BUSApp.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\APPLAYER\Communication\BUSApp.h</FilePath>
+            </File>
+            <File>
+              <FileName>MBAApp.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\APPLAYER\Communication\MBAApp.h</FilePath>
+            </File>
+            <File>
+              <FileName>DeviceApp.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\APPLAYER\DeviceInterface\DeviceApp.h</FilePath>
+            </File>
+            <File>
+              <FileName>OSSupport.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\APPLAYER\OSSupport.h</FilePath>
+            </File>
+            <File>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\main.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>MBALIBRARY</GroupName>
+          <Files>
+            <File>
+              <FileName>MBALib.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBALib.h</FilePath>
+            </File>
+            <File>
+              <FileName>MBATypes.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBATypes.h</FilePath>
+            </File>
+            <File>
+              <FileName>MBADictionary.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBADictionary\MBADictionary.h</FilePath>
+            </File>
+            <File>
+              <FileName>MBAConfigProtocol.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAConfigProtocol.h</FilePath>
+            </File>
+            <File>
+              <FileName>MBAOperationProtocol.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocol.h</FilePath>
+            </File>
+            <File>
+              <FileName>MBATransferProtocol.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBATransferProtocol.h</FilePath>
+            </File>
+            <File>
+              <FileName>ActiveState.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocolStates\ActiveState.h</FilePath>
+            </File>
+            <File>
+              <FileName>ConfigState.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocolStates\ConfigState.h</FilePath>
+            </File>
+            <File>
+              <FileName>DisconnectedState.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocolStates\DisconnectedState.h</FilePath>
+            </File>
+            <File>
+              <FileName>FaultDetectedState.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocolStates\FaultDetectedState.h</FilePath>
+            </File>
+            <File>
+              <FileName>FaultState.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocolStates\FaultState.h</FilePath>
+            </File>
+            <File>
+              <FileName>InactiveState.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocolStates\InactiveState.h</FilePath>
+            </File>
+            <File>
+              <FileName>InitState.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocolStates\InitState.h</FilePath>
+            </File>
+            <File>
+              <FileName>ScanState.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocolStates\ScanState.h</FilePath>
+            </File>
+            <File>
+              <FileName>ActiveState.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocolStates\ActiveState.c</FilePath>
+            </File>
+            <File>
+              <FileName>ConfigState.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocolStates\ConfigState.c</FilePath>
+            </File>
+            <File>
+              <FileName>DisconnectedState.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocolStates\DisconnectedState.c</FilePath>
+            </File>
+            <File>
+              <FileName>FaultDetectedState.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocolStates\FaultDetectedState.c</FilePath>
+            </File>
+            <File>
+              <FileName>FaultState.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocolStates\FaultState.c</FilePath>
+            </File>
+            <File>
+              <FileName>InactiveState.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocolStates\InactiveState.c</FilePath>
+            </File>
+            <File>
+              <FileName>InitState.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocolStates\InitState.c</FilePath>
+            </File>
+            <File>
+              <FileName>ScanState.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocolStates\ScanState.c</FilePath>
+            </File>
+            <File>
+              <FileName>MBAConfigProtocol.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAConfigProtocol.c</FilePath>
+            </File>
+            <File>
+              <FileName>MBAOperationProtocol.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocol.c</FilePath>
+            </File>
+            <File>
+              <FileName>MBATransferProtocol.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBATransferProtocol.c</FilePath>
+            </File>
+            <File>
+              <FileName>MBADictionary.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBADictionary\MBADictionary.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>PHDLLAYER</GroupName>
+          <Files>
+            <File>
+              <FileName>Interrupt_Functions.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\PHDLLAYER\IRQHANDLE\Interrupt_Functions.c</FilePath>
+            </File>
+            <File>
+              <FileName>boardAPI.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\PHDLLAYER\BOARDAPI\boardAPI.c</FilePath>
+            </File>
+            <File>
+              <FileName>BUSAPI.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\PHDLLAYER\BUSAPI\BUSAPI.c</FilePath>
+            </File>
+            <File>
+              <FileName>USBAPI.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\PHDLLAYER\BUSAPI\USBAPI\USBAPI.c</FilePath>
+            </File>
+            <File>
+              <FileName>USBD_User_CustomClass_0.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\PHDLLAYER\BUSAPI\USBAPI\USBD_User_CustomClass_0.c</FilePath>
+            </File>
+            <File>
+              <FileName>USBD_User_CustomClass_1.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\PHDLLAYER\BUSAPI\USBAPI\USBD_User_CustomClass_1.c</FilePath>
+            </File>
+            <File>
+              <FileName>SPIAPI.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\PHDLLAYER\BUSAPI\SPIAPI\SPIAPI.c</FilePath>
+            </File>
+            <File>
+              <FileName>USARTAPI.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\PHDLLAYER\BUSAPI\USARTAPI\USARTAPI.c</FilePath>
+            </File>
+            <File>
+              <FileName>BUSAPI.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\PHDLLAYER\BUSAPI\BUSAPI.h</FilePath>
+            </File>
+            <File>
+              <FileName>USBAPI.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\PHDLLAYER\BUSAPI\USBAPI\USBAPI.h</FilePath>
+            </File>
+            <File>
+              <FileName>USARTAPI.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\PHDLLAYER\BUSAPI\USARTAPI\USARTAPI.h</FilePath>
+            </File>
+            <File>
+              <FileName>SPIAPI.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\PHDLLAYER\BUSAPI\SPIAPI\SPIAPI.h</FilePath>
+            </File>
+            <File>
+              <FileName>boardAPI.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\PHDLLAYER\BOARDAPI\boardAPI.h</FilePath>
+            </File>
+            <File>
+              <FileName>Interrupt_Functions.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\PHDLLAYER\IRQHANDLE\Interrupt_Functions.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>TOOLS</GroupName>
+          <Files>
+            <File>
+              <FileName>BufferFunctions.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\TOOLS\BufferFunctions.h</FilePath>
+            </File>
+            <File>
+              <FileName>MemoryManagement.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\TOOLS\MemoryManagement.h</FilePath>
+            </File>
+            <File>
+              <FileName>BufferFunctions.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\TOOLS\BufferFunctions.c</FilePath>
+            </File>
+            <File>
+              <FileName>MemoryManagement.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\TOOLS\MemoryManagement.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>SYSTEMFILES</GroupName>
+          <Files>
+            <File>
+              <FileName>SysConfig.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\SysConfig.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>::CMSIS</GroupName>
+        </Group>
+        <Group>
+          <GroupName>::CMSIS Driver</GroupName>
+        </Group>
+        <Group>
+          <GroupName>::Device</GroupName>
+        </Group>
+        <Group>
+          <GroupName>::USB</GroupName>
+        </Group>
+      </Groups>
+    </Target>
+    <Target>
+      <TargetName>SYSTEMTEST</TargetName>
+      <ToolsetNumber>0x3</ToolsetNumber>
+      <ToolsetName>ARM-GNU</ToolsetName>
+      <TargetOption>
+        <TargetCommonOption>
+          <Device>STM32F405RGTx</Device>
+          <Vendor>STMicroelectronics</Vendor>
+          <PackID>Keil.STM32F4xx_DFP.2.4.0</PackID>
+          <PackURL>http://www.keil.com/pack</PackURL>
+          <Cpu>IROM(0x08000000,0x100000) IRAM(0x20000000,0x20000) IRAM2(0x10000000,0x10000) CPUTYPE("Cortex-M4") FPU2 CLOCK(12000000) ELITTLE</Cpu>
+          <FlashUtilSpec></FlashUtilSpec>
+          <StartupFile></StartupFile>
+          <FlashDriverDll>UL2CM3(-S0 -C0 -P0 -FD20000000 -FC1000 -FN1 -FF0STM32F4xx_1024 -FS08000000 -FL0100000 -FP0($$Device:STM32F405RGTx$CMSIS/Flash/STM32F4xx_1024.FLM))</FlashDriverDll>
+          <DeviceId>0</DeviceId>
+          <RegisterFile>$$Device:STM32F405RGTx$Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h</RegisterFile>
+          <MemoryEnv></MemoryEnv>
+          <Cmp></Cmp>
+          <Asm></Asm>
+          <Linker></Linker>
+          <OHString></OHString>
+          <InfinionOptionDll></InfinionOptionDll>
+          <SLE66CMisc></SLE66CMisc>
+          <SLE66AMisc></SLE66AMisc>
+          <SLE66LinkerMisc></SLE66LinkerMisc>
+          <SFDFile>$$Device:STM32F405RGTx$CMSIS\SVD\STM32F40x.svd</SFDFile>
+          <bCustSvd>0</bCustSvd>
+          <UseEnv>0</UseEnv>
+          <BinPath></BinPath>
+          <IncludePath></IncludePath>
+          <LibPath></LibPath>
+          <RegisterFilePath></RegisterFilePath>
+          <DBRegisterFilePath></DBRegisterFilePath>
+          <TargetStatus>
+            <Error>0</Error>
+            <ExitCodeStop>0</ExitCodeStop>
+            <ButtonStop>0</ButtonStop>
+            <NotGenerated>0</NotGenerated>
+            <InvalidFlash>1</InvalidFlash>
+          </TargetStatus>
+          <OutputDirectory>.\</OutputDirectory>
+          <OutputName>MBA</OutputName>
+          <CreateExecutable>1</CreateExecutable>
+          <CreateLib>0</CreateLib>
+          <CreateHexFile>0</CreateHexFile>
+          <DebugInformation>1</DebugInformation>
+          <BrowseInformation>0</BrowseInformation>
+          <ListingPath>.\</ListingPath>
+          <HexFormatSelection>1</HexFormatSelection>
+          <Merge32K>0</Merge32K>
+          <CreateBatchFile>0</CreateBatchFile>
+          <BeforeCompile>
+            <RunUserProg1>0</RunUserProg1>
+            <RunUserProg2>0</RunUserProg2>
+            <UserProg1Name></UserProg1Name>
+            <UserProg2Name></UserProg2Name>
+            <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
+            <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
+            <nStopU1X>0</nStopU1X>
+            <nStopU2X>0</nStopU2X>
+          </BeforeCompile>
+          <BeforeMake>
+            <RunUserProg1>0</RunUserProg1>
+            <RunUserProg2>0</RunUserProg2>
+            <UserProg1Name></UserProg1Name>
+            <UserProg2Name></UserProg2Name>
+            <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
+            <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
+            <nStopB1X>0</nStopB1X>
+            <nStopB2X>0</nStopB2X>
+          </BeforeMake>
+          <AfterMake>
+            <RunUserProg1>0</RunUserProg1>
+            <RunUserProg2>0</RunUserProg2>
+            <UserProg1Name></UserProg1Name>
+            <UserProg2Name></UserProg2Name>
+            <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
+            <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
+          </AfterMake>
+          <SelectedForBatchBuild>0</SelectedForBatchBuild>
+          <SVCSIdString></SVCSIdString>
+        </TargetCommonOption>
+        <CommonProperty>
+          <UseCPPCompiler>0</UseCPPCompiler>
+          <RVCTCodeConst>0</RVCTCodeConst>
+          <RVCTZI>0</RVCTZI>
+          <RVCTOtherData>0</RVCTOtherData>
+          <ModuleSelection>0</ModuleSelection>
+          <IncludeInBuild>1</IncludeInBuild>
+          <AlwaysBuild>0</AlwaysBuild>
+          <GenerateAssemblyFile>0</GenerateAssemblyFile>
+          <AssembleAssemblyFile>0</AssembleAssemblyFile>
+          <PublicsOnly>0</PublicsOnly>
+          <StopOnExitCode>3</StopOnExitCode>
+          <CustomArgument></CustomArgument>
+          <IncludeLibraryModules></IncludeLibraryModules>
+          <ComprImg>1</ComprImg>
+        </CommonProperty>
+        <DllOption>
+          <SimDllName>SARMCM3.DLL</SimDllName>
+          <SimDllArguments> -REMAP -MPU</SimDllArguments>
+          <SimDlgDll>DCM.DLL</SimDlgDll>
+          <SimDlgDllArguments>-pCM4</SimDlgDllArguments>
+          <TargetDllName>SARMCM3.DLL</TargetDllName>
+          <TargetDllArguments> -MPU</TargetDllArguments>
+          <TargetDlgDll>TCM.DLL</TargetDlgDll>
+          <TargetDlgDllArguments>-pCM4</TargetDlgDllArguments>
+        </DllOption>
+        <DebugOption>
+          <OPTHX>
+            <HexSelection>1</HexSelection>
+            <HexRangeLowAddress>0</HexRangeLowAddress>
+            <HexRangeHighAddress>0</HexRangeHighAddress>
+            <HexOffset>0</HexOffset>
+            <Oh166RecLen>16</Oh166RecLen>
+          </OPTHX>
+          <Simulator>
+            <UseSimulator>0</UseSimulator>
+            <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
+            <RunToMain>1</RunToMain>
+            <RestoreBreakpoints>1</RestoreBreakpoints>
+            <RestoreWatchpoints>1</RestoreWatchpoints>
+            <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
+            <RestoreFunctions>1</RestoreFunctions>
+            <RestoreToolbox>1</RestoreToolbox>
+            <LimitSpeedToRealTime>0</LimitSpeedToRealTime>
+            <RestoreSysVw>1</RestoreSysVw>
+          </Simulator>
+          <Target>
+            <UseTarget>1</UseTarget>
+            <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
+            <RunToMain>1</RunToMain>
+            <RestoreBreakpoints>1</RestoreBreakpoints>
+            <RestoreWatchpoints>1</RestoreWatchpoints>
+            <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
+            <RestoreFunctions>0</RestoreFunctions>
+            <RestoreToolbox>1</RestoreToolbox>
+            <RestoreTracepoints>1</RestoreTracepoints>
+            <RestoreSysVw>1</RestoreSysVw>
+          </Target>
+          <RunDebugAfterBuild>0</RunDebugAfterBuild>
+          <TargetSelection>1</TargetSelection>
+          <SimDlls>
+            <CpuDll></CpuDll>
+            <CpuDllArguments></CpuDllArguments>
+            <PeripheralDll></PeripheralDll>
+            <PeripheralDllArguments></PeripheralDllArguments>
+            <InitializationFile></InitializationFile>
+          </SimDlls>
+          <TargetDlls>
+            <CpuDll></CpuDll>
+            <CpuDllArguments></CpuDllArguments>
+            <PeripheralDll></PeripheralDll>
+            <PeripheralDllArguments></PeripheralDllArguments>
+            <InitializationFile></InitializationFile>
+            <Driver>BIN\UL2CM3.DLL</Driver>
+          </TargetDlls>
+        </DebugOption>
+        <Utilities>
+          <Flash1>
+            <UseTargetDll>1</UseTargetDll>
+            <UseExternalTool>0</UseExternalTool>
+            <RunIndependent>0</RunIndependent>
+            <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
+            <Capability>0</Capability>
+            <DriverSelection>-1</DriverSelection>
+          </Flash1>
+          <bUseTDR>1</bUseTDR>
+          <Flash2>BIN\UL2CM3.DLL</Flash2>
+          <Flash3></Flash3>
+          <Flash4></Flash4>
+          <pFcarmOut></pFcarmOut>
+          <pFcarmGrp></pFcarmGrp>
+          <pFcArmRoot></pFcArmRoot>
+          <FcArmLst>0</FcArmLst>
+        </Utilities>
+        <TargetArm>
+          <ArmMisc>
+            <asLst>0</asLst>
+            <asHll>1</asHll>
+            <asAsm>1</asAsm>
+            <asMacX>1</asMacX>
+            <asSyms>1</asSyms>
+            <asFals>1</asFals>
+            <asDbgD>1</asDbgD>
+            <asForm>1</asForm>
+            <ldLst>0</ldLst>
+            <ldmm>1</ldmm>
+            <ldXref>1</ldXref>
+            <BigEnd>0</BigEnd>
+            <GCPUTYP>"Cortex-M4"</GCPUTYP>
+            <mOS>0</mOS>
+            <uocRom>0</uocRom>
+            <uocRam>0</uocRam>
+            <hadIROM>1</hadIROM>
+            <hadIRAM>1</hadIRAM>
+            <hadXRAM>0</hadXRAM>
+            <uocXRam>0</uocXRam>
+            <RvdsVP>2</RvdsVP>
+            <hadIRAM2>1</hadIRAM2>
+            <hadIROM2>0</hadIROM2>
+            <OnChipMemories>
+              <Ocm1>
+                <Type>0</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </Ocm1>
+              <Ocm2>
+                <Type>0</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </Ocm2>
+              <Ocm3>
+                <Type>0</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </Ocm3>
+              <Ocm4>
+                <Type>0</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </Ocm4>
+              <Ocm5>
+                <Type>0</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </Ocm5>
+              <Ocm6>
+                <Type>0</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </Ocm6>
+              <IRAM>
+                <Type>0</Type>
+                <StartAddress>0x20000000</StartAddress>
+                <Size>0x20000</Size>
+              </IRAM>
+              <IROM>
+                <Type>1</Type>
+                <StartAddress>0x8000000</StartAddress>
+                <Size>0x100000</Size>
+              </IROM>
+              <XRAM>
+                <Type>0</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </XRAM>
+              <IRAM2>
+                <Type>0</Type>
+                <StartAddress>0x10000000</StartAddress>
+                <Size>0x10000</Size>
+              </IRAM2>
+              <IROM2>
+                <Type>0</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </IROM2>
+            </OnChipMemories>
+          </ArmMisc>
+          <Carm>
+            <arpcs>1</arpcs>
+            <stkchk>0</stkchk>
+            <reentr>0</reentr>
+            <interw>1</interw>
+            <bigend>0</bigend>
+            <Strict>0</Strict>
+            <Optim>0</Optim>
+            <wLevel>2</wLevel>
+            <uThumb>0</uThumb>
+            <VariousControls>
+              <MiscControls></MiscControls>
+              <Define></Define>
+              <Undefine></Undefine>
+              <IncludePath></IncludePath>
+            </VariousControls>
+          </Carm>
+          <Aarm>
+            <bBE>0</bBE>
+            <interw>1</interw>
+            <VariousControls>
+              <MiscControls></MiscControls>
+              <Define></Define>
+              <Undefine></Undefine>
+              <IncludePath></IncludePath>
+            </VariousControls>
+          </Aarm>
+          <LDarm>
+            <umfTarg>1</umfTarg>
+            <enaGarb>0</enaGarb>
+            <noStart>1</noStart>
+            <noStLib>0</noStLib>
+            <uMathLib>1</uMathLib>
+            <TextAddressRange></TextAddressRange>
+            <DataAddressRange></DataAddressRange>
+            <BSSAddressRange></BSSAddressRange>
+            <IncludeLibs></IncludeLibs>
+            <IncludeDir></IncludeDir>
+            <Misc></Misc>
+            <ScatterFile></ScatterFile>
+          </LDarm>
+        </TargetArm>
+      </TargetOption>
+      <Groups>
+        <Group>
+          <GroupName>APPLAYER</GroupName>
+          <Files>
+            <File>
+              <FileName>OSSupport.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\APPLAYER\OSSupport.c</FilePath>
+            </File>
+            <File>
+              <FileName>DeviceApp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\APPLAYER\DeviceInterface\DeviceApp.c</FilePath>
+            </File>
+            <File>
+              <FileName>BUSApp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\APPLAYER\Communication\BUSApp.c</FilePath>
+            </File>
+            <File>
+              <FileName>MBAApp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\APPLAYER\Communication\MBAApp.c</FilePath>
+            </File>
+            <File>
+              <FileName>BUSApp.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\APPLAYER\Communication\BUSApp.h</FilePath>
+            </File>
+            <File>
+              <FileName>MBAApp.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\APPLAYER\Communication\MBAApp.h</FilePath>
+            </File>
+            <File>
+              <FileName>DeviceApp.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\APPLAYER\DeviceInterface\DeviceApp.h</FilePath>
+            </File>
+            <File>
+              <FileName>OSSupport.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\APPLAYER\OSSupport.h</FilePath>
+            </File>
+            <File>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\main.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>MBALIBRARY</GroupName>
+          <Files>
+            <File>
+              <FileName>MBALib.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBALib.h</FilePath>
+            </File>
+            <File>
+              <FileName>MBATypes.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBATypes.h</FilePath>
+            </File>
+            <File>
+              <FileName>MBADictionary.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBADictionary\MBADictionary.h</FilePath>
+            </File>
+            <File>
+              <FileName>MBAConfigProtocol.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAConfigProtocol.h</FilePath>
+            </File>
+            <File>
+              <FileName>MBAOperationProtocol.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocol.h</FilePath>
+            </File>
+            <File>
+              <FileName>MBATransferProtocol.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBATransferProtocol.h</FilePath>
+            </File>
+            <File>
+              <FileName>ActiveState.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocolStates\ActiveState.h</FilePath>
+            </File>
+            <File>
+              <FileName>ConfigState.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocolStates\ConfigState.h</FilePath>
+            </File>
+            <File>
+              <FileName>DisconnectedState.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocolStates\DisconnectedState.h</FilePath>
+            </File>
+            <File>
+              <FileName>FaultDetectedState.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocolStates\FaultDetectedState.h</FilePath>
+            </File>
+            <File>
+              <FileName>FaultState.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocolStates\FaultState.h</FilePath>
+            </File>
+            <File>
+              <FileName>InactiveState.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocolStates\InactiveState.h</FilePath>
+            </File>
+            <File>
+              <FileName>InitState.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocolStates\InitState.h</FilePath>
+            </File>
+            <File>
+              <FileName>ScanState.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocolStates\ScanState.h</FilePath>
+            </File>
+            <File>
+              <FileName>ActiveState.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocolStates\ActiveState.c</FilePath>
+            </File>
+            <File>
+              <FileName>ConfigState.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocolStates\ConfigState.c</FilePath>
+            </File>
+            <File>
+              <FileName>DisconnectedState.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocolStates\DisconnectedState.c</FilePath>
+            </File>
+            <File>
+              <FileName>FaultDetectedState.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocolStates\FaultDetectedState.c</FilePath>
+            </File>
+            <File>
+              <FileName>FaultState.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocolStates\FaultState.c</FilePath>
+            </File>
+            <File>
+              <FileName>InactiveState.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocolStates\InactiveState.c</FilePath>
+            </File>
+            <File>
+              <FileName>InitState.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocolStates\InitState.c</FilePath>
+            </File>
+            <File>
+              <FileName>ScanState.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocolStates\ScanState.c</FilePath>
+            </File>
+            <File>
+              <FileName>MBAConfigProtocol.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAConfigProtocol.c</FilePath>
+            </File>
+            <File>
+              <FileName>MBAOperationProtocol.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBAOperationProtocol.c</FilePath>
+            </File>
+            <File>
+              <FileName>MBATransferProtocol.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBAProtocols\MBATransferProtocol.c</FilePath>
+            </File>
+            <File>
+              <FileName>MBADictionary.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\MBALibrary\MBADictionary\MBADictionary.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>PHDLLAYER</GroupName>
+          <Files>
+            <File>
+              <FileName>Interrupt_Functions.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\PHDLLAYER\IRQHANDLE\Interrupt_Functions.c</FilePath>
+            </File>
+            <File>
+              <FileName>boardAPI.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\PHDLLAYER\BOARDAPI\boardAPI.c</FilePath>
+            </File>
+            <File>
+              <FileName>BUSAPI.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\PHDLLAYER\BUSAPI\BUSAPI.c</FilePath>
+            </File>
+            <File>
+              <FileName>USBAPI.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\PHDLLAYER\BUSAPI\USBAPI\USBAPI.c</FilePath>
+            </File>
+            <File>
+              <FileName>USBD_User_CustomClass_0.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\PHDLLAYER\BUSAPI\USBAPI\USBD_User_CustomClass_0.c</FilePath>
+            </File>
+            <File>
+              <FileName>USBD_User_CustomClass_1.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\PHDLLAYER\BUSAPI\USBAPI\USBD_User_CustomClass_1.c</FilePath>
+            </File>
+            <File>
+              <FileName>SPIAPI.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\PHDLLAYER\BUSAPI\SPIAPI\SPIAPI.c</FilePath>
+            </File>
+            <File>
+              <FileName>USARTAPI.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\PHDLLAYER\BUSAPI\USARTAPI\USARTAPI.c</FilePath>
+            </File>
+            <File>
+              <FileName>BUSAPI.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\PHDLLAYER\BUSAPI\BUSAPI.h</FilePath>
+            </File>
+            <File>
+              <FileName>USBAPI.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\PHDLLAYER\BUSAPI\USBAPI\USBAPI.h</FilePath>
+            </File>
+            <File>
+              <FileName>USARTAPI.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\PHDLLAYER\BUSAPI\USARTAPI\USARTAPI.h</FilePath>
+            </File>
+            <File>
+              <FileName>SPIAPI.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\PHDLLAYER\BUSAPI\SPIAPI\SPIAPI.h</FilePath>
+            </File>
+            <File>
+              <FileName>boardAPI.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\PHDLLAYER\BOARDAPI\boardAPI.h</FilePath>
+            </File>
+            <File>
+              <FileName>Interrupt_Functions.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\PHDLLAYER\IRQHANDLE\Interrupt_Functions.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>TOOLS</GroupName>
+          <Files>
+            <File>
+              <FileName>BufferFunctions.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\TOOLS\BufferFunctions.h</FilePath>
+            </File>
+            <File>
+              <FileName>MemoryManagement.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SourceCode\TOOLS\MemoryManagement.h</FilePath>
+            </File>
+            <File>
+              <FileName>BufferFunctions.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\TOOLS\BufferFunctions.c</FilePath>
+            </File>
+            <File>
+              <FileName>MemoryManagement.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SourceCode\TOOLS\MemoryManagement.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>SYSTEMFILES</GroupName>
+          <Files>
+            <File>
+              <FileName>SysConfig.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\SysConfig.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>::CMSIS</GroupName>
+        </Group>
+        <Group>
+          <GroupName>::CMSIS Driver</GroupName>
+        </Group>
+        <Group>
+          <GroupName>::Device</GroupName>
+        </Group>
+        <Group>
+          <GroupName>::USB</GroupName>
+          <GroupOption>
+            <CommonProperty>
+              <UseCPPCompiler>0</UseCPPCompiler>
+              <RVCTCodeConst>0</RVCTCodeConst>
+              <RVCTZI>0</RVCTZI>
+              <RVCTOtherData>0</RVCTOtherData>
+              <ModuleSelection>0</ModuleSelection>
+              <IncludeInBuild>0</IncludeInBuild>
+              <AlwaysBuild>2</AlwaysBuild>
+              <GenerateAssemblyFile>2</GenerateAssemblyFile>
+              <AssembleAssemblyFile>2</AssembleAssemblyFile>
+              <PublicsOnly>2</PublicsOnly>
+              <StopOnExitCode>11</StopOnExitCode>
+              <CustomArgument></CustomArgument>
+              <IncludeLibraryModules></IncludeLibraryModules>
+              <ComprImg>1</ComprImg>
+            </CommonProperty>
+            <GroupArm>
+              <Carm>
+                <arpcs>2</arpcs>
+                <stkchk>2</stkchk>
+                <reentr>2</reentr>
+                <interw>2</interw>
+                <bigend>2</bigend>
+                <Strict>0</Strict>
+                <Optim>0</Optim>
+                <wLevel>0</wLevel>
+                <uThumb>2</uThumb>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Carm>
+              <Aarm>
+                <bBE>2</bBE>
+                <interw>2</interw>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Aarm>
+            </GroupArm>
+          </GroupOption>
+        </Group>
+      </Groups>
+    </Target>
+  </Targets>
+
+  <RTE>
+    <apis>
+      <api Capiversion="2.01" Cclass="CMSIS Driver" Cgroup="SPI" exclusive="0">
+        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="4.3.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </api>
+      <api Capiversion="2.01" Cclass="CMSIS Driver" Cgroup="USART" exclusive="0">
+        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="4.3.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </api>
+      <api Capiversion="2.01" Cclass="CMSIS Driver" Cgroup="USB Device" exclusive="0">
+        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="4.3.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </api>
+      <api Capiversion="1.0" Cclass="CMSIS" Cgroup="RTOS" exclusive="1">
+        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="4.3.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </api>
+      <api Cclass="Device" Cgroup="STM32Cube Framework" exclusive="1">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </api>
+    </apis>
+    <components>
+      <component Cclass="CMSIS" Cgroup="CORE" Cvendor="ARM" Cversion="4.1.0" condition="CMSIS Core">
+        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="4.3.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="CMSIS" Cgroup="DSP" Cvendor="ARM" Cversion="1.4.5" condition="CMSIS DSP">
+        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="4.3.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="CMSIS" Cgroup="RTOS" Csub="Keil RTX" Cvendor="ARM" Cversion="4.78.0" condition="Cortex-M Device Startup">
+        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="4.3.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cbundle="MDK-Pro" Cclass="USB" Cgroup="CORE" Cvendor="Keil" Cversion="6.3.0" condition="USB Core">
+        <package name="MDK-Middleware" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="6.3.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+        </targetInfos>
+      </component>
+      <component Cbundle="MDK-Pro" Cclass="USB" Cgroup="Device" Cvendor="Keil" Cversion="6.3.0" condition="USB Core and Device Driver" maxInstances="4">
+        <package name="MDK-Middleware" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="6.3.0"/>
+        <targetInfos>
+          <targetInfo instances="2" name="MBAUSB" versionMatchMode=""/>
+        </targetInfos>
+      </component>
+      <component Cbundle="MDK-Pro" Cclass="USB" Cgroup="Device" Csub="Custom Class" Cvendor="Keil" Cversion="6.3.0" condition="USB Device" maxInstances="4">
+        <package name="MDK-Middleware" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="6.3.0"/>
+        <targetInfos>
+          <targetInfo instances="2" name="MBAUSB" versionMatchMode=""/>
+        </targetInfos>
+      </component>
+      <component Capiversion="2.01" Cclass="CMSIS Driver" Cgroup="SPI" Cvendor="Keil" Cversion="2.02" condition="STM32F4 CMSIS_Driver SPI">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Capiversion="2.01" Cclass="CMSIS Driver" Cgroup="USART" Cvendor="Keil" Cversion="2.01" condition="STM32F4 CMSIS_Driver USART">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Capiversion="2.01" Cclass="CMSIS Driver" Cgroup="USB Device" Csub="Full-speed" Cvendor="Keil" Cversion="2.06" condition="STM32F4 CMSIS_Driver USB0">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Capiversion="2.01" Cclass="CMSIS Driver" Cgroup="USB Device" Csub="High-speed" Cvendor="Keil" Cversion="2.06" condition="STM32F4 CMSIS_Driver USB1">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube Framework" Csub="Classic" Cvendor="Keil" Cversion="1.1.0" condition="STM32F4 Framework Classic">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="ADC" Cvendor="Keil" Cversion="1.1.0" condition="STM32F4 HAL DMA">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="CAN" Cvendor="Keil" Cversion="1.1.0" condition="STM32F4x5_7_9 HAL">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="CRC" Cvendor="Keil" Cversion="1.1.0" condition="STM32F4 HAL">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="Common" Cvendor="Keil" Cversion="1.1.0" condition="STM32F4 HAL Common">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="Cortex" Cvendor="Keil" Cversion="1.1.0" condition="STM32F4 HAL">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="DAC" Cvendor="Keil" Cversion="1.1.0" condition="STM32F4x5_7_9 HAL DMA">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="DMA" Cvendor="Keil" Cversion="1.1.0" condition="STM32F4 HAL">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="Flash" Cvendor="Keil" Cversion="1.1.0" condition="STM32F4 HAL">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="GPIO" Cvendor="Keil" Cversion="1.1.0" condition="STM32F4 HAL">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="HCD" Cvendor="Keil" Cversion="1.1.0" condition="STM32F4 HAL">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="I2C" Cvendor="Keil" Cversion="1.1.0" condition="STM32F4 HAL DMA RCC">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="I2S" Cvendor="Keil" Cversion="1.1.0" condition="STM32F4 HAL DMA">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="IRDA" Cvendor="Keil" Cversion="1.1.0" condition="STM32F4 HAL DMA RCC">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="IWDG" Cvendor="Keil" Cversion="1.1.0" condition="STM32F4 HAL">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="NAND" Cvendor="Keil" Cversion="1.1.0" condition="STM32F4x5_7_9 HAL">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="NOR" Cvendor="Keil" Cversion="1.1.0" condition="STM32F4x5_7_9 HAL">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="PC Card" Cvendor="Keil" Cversion="1.1.0" condition="STM32F4x5_7_9 HAL">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="PCD" Cvendor="Keil" Cversion="1.1.0" condition="STM32F4 HAL">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="PWR" Cvendor="Keil" Cversion="1.1.0" condition="STM32F4 HAL">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="RCC" Cvendor="Keil" Cversion="1.1.0" condition="STM32F4 HAL GPIO">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="RNG" Cvendor="Keil" Cversion="1.1.0" condition="STM32F4 HAL">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="RTC" Cvendor="Keil" Cversion="1.1.0" condition="STM32F4 HAL">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="SD" Cvendor="Keil" Cversion="1.1.0" condition="STM32F4 HAL">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="SPI" Cvendor="Keil" Cversion="1.1.0" condition="STM32F4 HAL DMA">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="SRAM" Cvendor="Keil" Cversion="1.1.0" condition="STM32F4x5_7_9 HAL DMA">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="Smartcard" Cvendor="Keil" Cversion="1.1.0" condition="STM32F4 HAL DMA RCC">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="TIM" Cvendor="Keil" Cversion="1.1.0" condition="STM32F4 HAL DMA">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="UART" Cvendor="Keil" Cversion="1.1.0" condition="STM32F4 HAL DMA">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="USART" Cvendor="Keil" Cversion="1.1.0" condition="STM32F4 HAL DMA RCC">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="WWDG" Cvendor="Keil" Cversion="1.1.0" condition="STM32F4 HAL">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="2.1.0" condition="STM32F4 CMSIS">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </component>
+    </components>
+    <files>
+      <file attr="config" category="source" name="CMSIS\RTOS\RTX\Templates\RTX_Conf_CM.c" version="4.70.1">
+        <instance index="0">RTE\CMSIS\RTX_Conf_CM.c</instance>
+        <component Cclass="CMSIS" Cgroup="RTOS" Csub="Keil RTX" Cvendor="ARM" Cversion="4.78.0" condition="Cortex-M Device Startup"/>
+        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="4.3.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </file>
+      <file attr="config" category="header" name="CMSIS\Driver\Config\RTE_Device.h" version="2.01">
+        <instance index="0">RTE\Device\STM32F405RGTx\RTE_Device.h</instance>
+        <component Cclass="Device" Cgroup="STM32Cube Framework" Csub="Classic" Cvendor="Keil" Cversion="1.1.0" condition="STM32F4 Framework Classic"/>
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </file>
+      <file attr="config" category="source" condition="STM32F405xx_ARMCC" name="Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f405xx.s" version="2.1.0">
+        <instance index="0">RTE\Device\STM32F405RGTx\startup_stm32f405xx.s</instance>
+        <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="2.1.0" condition="STM32F4 CMSIS"/>
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </file>
+      <file attr="config" category="header" name="MDK\Templates\Inc\stm32f4xx_hal_conf.h">
+        <instance index="0">RTE\Device\STM32F405RGTx\stm32f4xx_hal_conf.h</instance>
+        <component Cclass="Device" Cgroup="STM32Cube Framework" Csub="Classic" Cvendor="Keil" Cversion="1.1.0" condition="STM32F4 Framework Classic"/>
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </file>
+      <file attr="config" category="source" name="MDK\Device\Source\ARM\system_stm32f4xx.c" version="2.1.0">
+        <instance index="0">RTE\Device\STM32F405RGTx\system_stm32f4xx.c</instance>
+        <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="2.1.0" condition="STM32F4 CMSIS"/>
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.4.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+          <targetInfo name="SYSTEMTEST"/>
+        </targetInfos>
+      </file>
+      <file attr="config" category="source" name="USB\Config\USBD_Config.c" version="5.00">
+        <instance index="0">RTE\USB\USBD_Config_0.c</instance>
+        <component Cbundle="MDK-Pro" Cclass="USB" Cgroup="Device" Cvendor="Keil" Cversion="6.3.0" condition="USB Core and Device Driver" maxInstances="4"/>
+        <package name="MDK-Middleware" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="6.3.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+        </targetInfos>
+      </file>
+      <file attr="config" category="source" name="USB\Config\USBD_Config.c" version="5.00">
+        <instance index="1">RTE\USB\USBD_Config_1.c</instance>
+        <component Cbundle="MDK-Pro" Cclass="USB" Cgroup="Device" Cvendor="Keil" Cversion="6.3.0" condition="USB Core and Device Driver" maxInstances="4"/>
+        <package name="MDK-Middleware" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="6.3.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+        </targetInfos>
+      </file>
+      <file attr="config" category="source" name="USB\Config\USBD_Config_CDC.h" version="5.00">
+        <instance index="0" removed="1">RTE\USB\USBD_Config_CDC_0.h</instance>
+        <component Cbundle="MDK-Pro" Cclass="USB" Cgroup="Device" Csub="CDC" Cvendor="Keil" Cversion="6.3.0" condition="USB Device" maxInstances="4"/>
+        <package name="MDK-Middleware" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="6.3.0"/>
+        <targetInfos/>
+      </file>
+      <file attr="config" category="source" name="USB\Config\USBD_Config_CDC.h" version="5.00">
+        <instance index="1" removed="1">RTE\USB\USBD_Config_CDC_1.h</instance>
+        <component Cbundle="MDK-Pro" Cclass="USB" Cgroup="Device" Csub="CDC" Cvendor="Keil" Cversion="6.3.0" condition="USB Device" maxInstances="4"/>
+        <package name="MDK-Middleware" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="6.3.0"/>
+        <targetInfos/>
+      </file>
+      <file attr="config" category="source" name="USB\Config\USBD_Config_CDC.h" version="5.00">
+        <instance index="2" removed="1">RTE\USB\USBD_Config_CDC_2.h</instance>
+        <component Cbundle="MDK-Pro" Cclass="USB" Cgroup="Device" Csub="CDC" Cvendor="Keil" Cversion="6.3.0" condition="USB Device" maxInstances="4"/>
+        <package name="MDK-Middleware" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="6.3.0"/>
+        <targetInfos/>
+      </file>
+      <file attr="config" category="source" name="USB\Config\USBD_Config_CDC.h" version="5.00">
+        <instance index="3" removed="1">RTE\USB\USBD_Config_CDC_3.h</instance>
+        <component Cbundle="MDK-Pro" Cclass="USB" Cgroup="Device" Csub="CDC" Cvendor="Keil" Cversion="6.3.0" condition="USB Device" maxInstances="4"/>
+        <package name="MDK-Middleware" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="6.3.0"/>
+        <targetInfos/>
+      </file>
+      <file attr="config" category="source" name="USB\Config\USBD_Config_CustomClass.h" version="5.00">
+        <instance index="0">RTE\USB\USBD_Config_CustomClass_0.h</instance>
+        <component Cbundle="MDK-Pro" Cclass="USB" Cgroup="Device" Csub="Custom Class" Cvendor="Keil" Cversion="6.3.0" condition="USB Device" maxInstances="4"/>
+        <package name="MDK-Middleware" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="6.3.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+        </targetInfos>
+      </file>
+      <file attr="config" category="source" name="USB\Config\USBD_Config_CustomClass.h" version="5.00">
+        <instance index="1">RTE\USB\USBD_Config_CustomClass_1.h</instance>
+        <component Cbundle="MDK-Pro" Cclass="USB" Cgroup="Device" Csub="Custom Class" Cvendor="Keil" Cversion="6.3.0" condition="USB Device" maxInstances="4"/>
+        <package name="MDK-Middleware" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="6.3.0"/>
+        <targetInfos>
+          <targetInfo name="MBAUSB"/>
+        </targetInfos>
+      </file>
+    </files>
+  </RTE>
+
+</Project>
