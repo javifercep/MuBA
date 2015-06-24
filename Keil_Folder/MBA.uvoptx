@@ -196,50 +196,34 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>114</LineNumber>
+          <LineNumber>351</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134219642</Address>
+          <Address>134224902</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\SourceCode\APPLAYER\Communication\MBAApp.c</Filename>
+          <Filename>..\SourceCode\PHDLLAYER\BUSAPI\USARTAPI\USARTAPI.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\MBA\../SourceCode/APPLAYER/Communication/MBAApp.c\114</Expression>
+          <Expression></Expression>
         </Bp>
         <Bp>
           <Number>1</Number>
           <Type>0</Type>
-          <LineNumber>295</LineNumber>
+          <LineNumber>310</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134219334</Address>
+          <Address>134224894</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\SourceCode\APPLAYER\Communication\BUSApp.c</Filename>
+          <Filename>..\SourceCode\PHDLLAYER\BUSAPI\USARTAPI\USARTAPI.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\MBA\../SourceCode/APPLAYER/Communication/BUSApp.c\295</Expression>
-        </Bp>
-        <Bp>
-          <Number>2</Number>
-          <Type>0</Type>
-          <LineNumber>120</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>0</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>0</BreakIfRCount>
-          <Filename>..\SourceCode\APPLAYER\Communication\MBAApp.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression></Expression>
+          <Expression>\\MuBA\../SourceCode/PHDLLAYER/BUSAPI/USARTAPI/USARTAPI.c\310</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -774,6 +758,38 @@
           <ExecCommand></ExecCommand>
           <Expression></Expression>
         </Bp>
+        <Bp>
+          <Number>19</Number>
+          <Type>0</Type>
+          <LineNumber>310</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>0</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>0</BreakIfRCount>
+          <Filename>..\SourceCode\PHDLLAYER\BUSAPI\USARTAPI\USARTAPI.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression></Expression>
+        </Bp>
+        <Bp>
+          <Number>20</Number>
+          <Type>0</Type>
+          <LineNumber>351</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>0</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>0</BreakIfRCount>
+          <Filename>..\SourceCode\PHDLLAYER\BUSAPI\USARTAPI\USARTAPI.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression></Expression>
+        </Bp>
       </Breakpoint>
       <Tracepoint>
         <THDelay>0</THDelay>
@@ -811,7 +827,7 @@
 
   <Group>
     <GroupName>APPLAYER</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>

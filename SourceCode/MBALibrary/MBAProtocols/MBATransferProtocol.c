@@ -292,10 +292,9 @@ int32_t TransferProtocolCast(TransProtFrame *TPFrame, uint8_t *pBuf, uint32_t Si
           pTPTemp->Header.TimeStamp = 0;
             /* Update the Destination ID checking in the Link Table */
           pTPTemp->Header.DestinationID = SetLogicalId(TransferProtocolGetIDLink (InterfaceID, INTERFACE_TO_LINKEDDEV));
-          pTPTemp->Header.DestinationID |= SetInterfaceId(InterfaceID);
       
           /* Update the source ID with the device Logical ID */
-          pTPTemp->Header.SourceID = TransferProtocolGetIDLink (InterfaceID, INTERFACE_TO_LOGICAL);
+          pTPTemp->Header.SourceID = SetLogicalId(LogicalID) |  SetInterfaceId(InterfaceID);
 
           /* Copy data */
           pTPTemp->Data = (uint8_t *)MemAlloc(Size);
