@@ -5,7 +5,7 @@ This software has been developed for multiple platforms and designed to add new 
 
 ## Supported platforms
 * Windows
-* [Noodleboard](https://github.com/javifercep/Noodleboard) (Based on STM32F405 MCU)
+* [Noodleboard](http://gitlab.euridies.com/javi/Noodleboard.git) (Based on STM32F405 MCU)
 * [Curryboard](https://github.com/javifercep/Curryboard) (Based on STM32F105 MCU)
 * [Chiliboard](https://github.com/javifercep/Chiliboard) (Based on STM32F105 MCU)
 
