@@ -139,56 +139,56 @@ ConfigProtRet ConfigFrameCast(ConfigProtFrame *CPFrame, uint8_t *pBuf, uint32_t 
     /* If the standard buffer is the input and the Config frame the output: */
     if((Mode & DIR_MASK) == CONFIG_FROM_BUFF)
     {
-	/* pTemp is used to point into different areas of the input standard buffer */
-	pBufTemp = pBuf;
+      /* pTemp is used to point into different areas of the input standard buffer */
+      pBufTemp = pBuf;
 
-	/* Register ID */
-	CPTemp->RegisterID = (uint16_t)(pBuf[REGID_LOW_INDEX] & WORD_LOW_MASK);
-	CPTemp->RegisterID |= (uint16_t)((pBuf[REGID_HIGH_INDEX] << BYTE_SHIFT) & WORD_HIGH_MASK);
-	/* Access and data type */
-	CPTemp->TypeAccess = pBuf[TYPEACCESS_INDEX];
+      /* Register ID */
+      CPTemp->RegisterID = (uint16_t)(pBuf[REGID_LOW_INDEX] & WORD_LOW_MASK);
+      CPTemp->RegisterID |= (uint16_t)((pBuf[REGID_HIGH_INDEX] << BYTE_SHIFT) & WORD_HIGH_MASK);
+      /* Access and data type */
+      CPTemp->TypeAccess = pBuf[TYPEACCESS_INDEX];
 
-	/* point pTemp to the config protocol data field */
-	pBufTemp += CONFIG_FRAME_HEADER;
-	
-	/* Copy data field (if exists) into config frame struct */
-	CPTemp->Data = (uint8_t*)MemAlloc(Size - CONFIG_FRAME_HEADER);
-	if(CPTemp->Data != NULL)
-	{
-	    memcpy(CPTemp->Data, pBufTemp, Size - CONFIG_FRAME_HEADER);
-	}
-	else
-	{
-	    ret = CP_ERROR;
-	}
+      /* point pTemp to the config protocol data field */
+      pBufTemp += CONFIG_FRAME_HEADER;
+
+      /* Copy data field (if exists) into config frame struct */
+      CPTemp->Data = (uint8_t*)MemAlloc(Size - CONFIG_FRAME_HEADER);
+      if(CPTemp->Data != NULL)
+      {
+        memcpy(CPTemp->Data, pBufTemp, Size - CONFIG_FRAME_HEADER);
+      }
+      else
+      {
+        ret = CP_ERROR;
+      }
     }
     else
     {
-	/* Allocate memory for output buffer and copy data from config frame*/
-	pBufTemp = pBuf;
-	
-	if(pBufTemp != NULL)
-	{
-	  /* Copy config protocol header */
-	  //memcpy(pTemp, CPTemp, CONFIG_FRAME_HEADER);
-	  pBufTemp[REGID_LOW_INDEX] = (uint8_t)(CPTemp->RegisterID & WORD_LOW_MASK);
-	  pBufTemp[REGID_HIGH_INDEX] = (uint8_t)((CPTemp->RegisterID >> BYTE_SHIFT) & WORD_LOW_MASK);
-	  pBufTemp[TYPEACCESS_INDEX] = CPTemp->TypeAccess;
-	  /* Point pTemp to the config protocol data field */
-	  pBufTemp += CONFIG_FRAME_HEADER;
-	  /* Copy data field */
-	  memcpy(pBufTemp, CPTemp->Data, Size);
-	}
-	else
-	{
-	    ret = CP_ERROR;
-	}
-	if(CPTemp->Data != NULL)
-	{
-	  /* Free the allocated memory for ConfigFrame */
-	  MemFree(CPTemp->Data);
-	  CPTemp->Data = NULL;
-	}
+      /* Allocate memory for output buffer and copy data from config frame*/
+      pBufTemp = pBuf;
+      
+      if(pBufTemp != NULL)
+      {
+        /* Copy config protocol header */
+        //memcpy(pTemp, CPTemp, CONFIG_FRAME_HEADER);
+        pBufTemp[REGID_LOW_INDEX] = (uint8_t)(CPTemp->RegisterID & WORD_LOW_MASK);
+        pBufTemp[REGID_HIGH_INDEX] = (uint8_t)((CPTemp->RegisterID >> BYTE_SHIFT) & WORD_LOW_MASK);
+        pBufTemp[TYPEACCESS_INDEX] = CPTemp->TypeAccess;
+        /* Point pTemp to the config protocol data field */
+        pBufTemp += CONFIG_FRAME_HEADER;
+        /* Copy data field */
+        memcpy(pBufTemp, CPTemp->Data, Size);
+      }
+      else
+      {
+          ret = CP_ERROR;
+      }
+      if(CPTemp->Data != NULL)
+      {
+        /* Free the allocated memory for ConfigFrame */
+        MemFree(CPTemp->Data);
+        CPTemp->Data = NULL;
+      }
     }
 
     return ret;

@@ -48,7 +48,7 @@ DEFINE_MAIL_QUEUE (MBAQueue, MBA_QUEUE_SIZE, TransProtFrame); /*!<  Mail queue o
 /* Call to BusApp variables to give thread management to the MBA thread*/
 extern BusInstance BusInstances[];
 extern MAIL_QUEUE_ID QueueIDBusQueue[];
-extern THREAD_ID ThreadIDBUSWriteProcess[BUS_INSTANCES];  /*!< Thread IDs */
+extern THREAD_ID ThreadIDBUSReadProcess[BUS_INSTANCES];  /*!< Thread IDs */
 
 /* Private function prototypes -----------------------------------------------*/
 
@@ -198,7 +198,7 @@ void MBABusInterfaceUpdate(void)
             case BUS_INACTIVE_2_ACTIVE:
         break;
       case BUS_ACTIVE_2_STOP:
-        StopThread(FuncRet, ThreadIDBUSWriteProcess[InterfaceCounter]);
+        StopThread(FuncRet, ThreadIDBUSReadProcess[InterfaceCounter]);
         if(FuncRet != 0)
         {
           /* Handle Error */

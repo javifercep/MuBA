@@ -799,7 +799,7 @@ void TransferProtocolUpdateLinks(void)
 {
   uint8_t index;
 
-  for ( index = 0; index < MAX_INTERFACES; index++)
+  for ( index = 0; index < AVAILABLE_INTERFACES; index++)
   {
       TPIDTable[index].LogicalID = LogicalID + index;
   }

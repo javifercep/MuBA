@@ -58,126 +58,125 @@ static uint8_t VendorID;
 static ObjectStruct Dictionary[] =
 {
     /* Global Identification registers */
-    {0x0100, "Device name",		sizeof("Device name"),		sizeof("Noodleboard") - 1,  	READ_ONLY_ACCESS | CHAR_DATA, 	 	"Noodleboard",  NULL},
-    {0x0101, "Vendor ID",  		sizeof("Vendor ID"), 		sizeof(VendorID),		READ_ONLY_ACCESS | UNSIGNED_DATA, 	&VendorID,	NULL},
+    {0x0100, "Device name",		      sizeof("Device name") - 1,		    sizeof("Noodleboard") - 1,  	READ_ONLY_ACCESS | CHAR_DATA, 	 	"Noodleboard",  NULL},
+    {0x0101, "Vendor ID",  		      sizeof("Vendor ID") - 1, 		      sizeof(VendorID),		          READ_ONLY_ACCESS | UNSIGNED_DATA, &VendorID,	    NULL},
     /* State machine registers */
-    {0x0A00, "Actual State",    	sizeof("Actual State"),       	0,                       	READ_ONLY_ACCESS | UNSIGNED_DATA, 	NULL,		NULL},
-    {0x0A0A, "Requested State", 	sizeof("Requested State"),    	0,                       	READ_ONLY_ACCESS | UNSIGNED_DATA, 	NULL,		NULL},
+    {0x0A00, "Actual State",    	  sizeof("Actual State") - 1,       0,                       	    READ_ONLY_ACCESS | UNSIGNED_DATA, NULL,		        NULL},
+    {0x0A0A, "Requested State", 	  sizeof("Requested State") - 1,    0,                          	READ_ONLY_ACCESS | UNSIGNED_DATA, NULL,		        NULL},
     /* Device Identification in network */
-    {0x0F00, "Device ID", 		sizeof("Device ID"),	   	0,				FULL_ACCESS | UNSIGNED_DATA, 		NULL,		NULL},
-    {0x0F10, "Device Interfaces", 	sizeof("Device Interfaces"),  	0,                       	READ_ONLY_ACCESS | UNSIGNED_DATA, 	NULL,		NULL},
+    {0x0F00, "Device ID", 		      sizeof("Device ID") - 1,	   	    0,				                    FULL_ACCESS | UNSIGNED_DATA, 		  NULL,		        NULL},
+    {0x0F10, "Device Interfaces", 	sizeof("Device Interfaces") - 1,  0,                       	    READ_ONLY_ACCESS | UNSIGNED_DATA, NULL,		        NULL},
 #if AVAILABLE_INTERFACES > 0
     /* Interface 0 description: USB */
-    {0x1000, "Interface 0", 	    	sizeof("Interface 0"), 		0,				READ_ONLY_ACCESS | UNSIGNED_DATA,	NULL,		NULL},
-    {0x1001, "Interface ID", 	    	sizeof("Interface ID"), 	0,				READ_ONLY_ACCESS | CHAR_DATA, 		NULL,		NULL},
-    {0x1002, "Interface Link",    	sizeof("Interface Link"),     	0, 				FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x1003, "Interface Type",    	sizeof("Interface Type"),     	0, 				FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x1004, "Interface State",   	sizeof("Interface State"),    	0, 				READ_ONLY_ACCESS | UNSIGNED_DATA, NULL,					NULL},
-    {0x1200, "PHDL Fields",       	sizeof("PHDL Fields"),        	0,                       	READ_ONLY_ACCESS | UNSIGNED_DATA, NULL,					NULL},
-    {0x1201, "Field 0",           	sizeof("Field 0"),            	0,                       	READ_ONLY_ACCESS | UNSIGNED_DATA, NULL,					NULL},
-    {0x1300, "PHDL Parameters",    	sizeof("PHDL Parameters"),    	0,                       	READ_ONLY_ACCESS | UNSIGNED_DATA, NULL,					NULL},
-    {0x1600, "Protocol Fields",   	sizeof("Protocol Fields"),    	0,                       	FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x1601, "Field 0",           	sizeof("Field 0"),            	0,                       	FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x1602, "Field 1",           	sizeof("Field 1"),            	0,                       	FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x1603, "Field 2",           	sizeof("Field 2"),            	0,                       	FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x1604, "Field 3",          	sizeof("Field 3"),            	0,                       	FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x1605, "Field 4",           	sizeof("Field 4"),            	0,                       	FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x1606, "Field 5",           	sizeof("Field 5"),            	0,                       	FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x1607, "Field 6",           	sizeof("Field 6"),            	0,                       	FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x1608, "Field 7",           	sizeof("Field 7"),            	0,                       	FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x1609, "Field 8",           	sizeof("Field 8"),            	0,                       	FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x160A, "Field 9",           	sizeof("Field 9"),            	0,                       	FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x160B, "Field 10",         	sizeof("Field 10"),           	0,                       	FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x160C, "Field 11",          	sizeof("Field 11"),           	0,                       	FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x160D, "Field 12",          	sizeof("Field 12"),           	0,                       	FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x160E, "Field 13",          	sizeof("Field 13"),           	0,                       	FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x160F, "Field 14",          	sizeof("Field 14"),           	0,                       	FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x1610, "Field 15",          	sizeof("Field 15"),           	0,                       	FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x1700, "Frame Detection",   	sizeof("Frame detection"),    	0,                       	FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x1701, "Field Detection",   	sizeof("Field detection"),    	0,                       	FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x1710, "Global Timeout",    	sizeof("Global Timeout"),     	0,                       	FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x1711, "Decoding Timeout",  	sizeof("Decoding Timeout"),   	0,                       	FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x1720, "Detection Field",   	sizeof("Detection field"),    	0,                       	FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x1730, "Size Field",        	sizeof("Size Field"),         	0,                       	FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x1740, "Split Value",       	sizeof("Split value"),        	0,                       	FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-#endif
+    {0x1000, "Interface 0", 	    	sizeof("Interface 0") - 1, 		    0,				                    READ_ONLY_ACCESS | UNSIGNED_DATA,	NULL,		        NULL},
+    {0x1001, "Interface ID", 	    	sizeof("Interface ID") - 1, 	    0,				                    READ_ONLY_ACCESS | CHAR_DATA, 		NULL,		        NULL},
+    {0x1002, "Interface Link",    	sizeof("Interface Link") - 1,     0, 				                    FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x1003, "Interface Type",    	sizeof("Interface Type") - 1,     0, 				                    FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x1004, "Interface State",   	sizeof("Interface State") - 1,    0, 				                    READ_ONLY_ACCESS | UNSIGNED_DATA, NULL,					  NULL},
+    {0x1200, "PHDL Fields",       	sizeof("PHDL Fields") - 1,        0,                       	    READ_ONLY_ACCESS | UNSIGNED_DATA, NULL,					  NULL},
+    {0x1201, "Field 0",           	sizeof("Field 0") - 1,            0,                       	    READ_ONLY_ACCESS | UNSIGNED_DATA, NULL,					  NULL},
+    {0x1300, "PHDL Parameters",    	sizeof("PHDL Parameters") - 1,    0,                       	    READ_ONLY_ACCESS | UNSIGNED_DATA, NULL,					  NULL},
+    {0x1600, "Protocol Fields",   	sizeof("Protocol Fields") - 1,    0,                       	    FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x1601, "Field 0",           	sizeof("Field 0") - 1,            0,                       	    FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x1602, "Field 1",           	sizeof("Field 1") - 1,            0,                       	    FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x1603, "Field 2",           	sizeof("Field 2") - 1,            0,                       	    FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x1604, "Field 3",          	  sizeof("Field 3") - 1,           	0,                       	    FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x1605, "Field 4",           	sizeof("Field 4") - 1,            0,                       	    FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x1606, "Field 5",           	sizeof("Field 5") - 1,            0,                       	    FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x1607, "Field 6",           	sizeof("Field 6") - 1,            0,                       	    FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x1608, "Field 7",           	sizeof("Field 7") - 1,            0,                       	    FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x1609, "Field 8",           	sizeof("Field 8") - 1,            0,                       	    FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x160A, "Field 9",           	sizeof("Field 9") - 1,            0,                       	    FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x160B, "Field 10",         	  sizeof("Field 10") - 1,          	0,                       	    FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x160C, "Field 11",          	sizeof("Field 11") - 1,           0,                       	    FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x160D, "Field 12",          	sizeof("Field 12") - 1,           0,                       	    FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x160E, "Field 13",          	sizeof("Field 13") - 1,           0,                       	    FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x160F, "Field 14",          	sizeof("Field 14") - 1,           0,                       	    FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x1610, "Field 15",          	sizeof("Field 15") - 1,           0,                       	    FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x1700, "Frame Detection",   	sizeof("Frame detection") - 1,    0,                       	    FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x1701, "Field Detection",   	sizeof("Field detection") - 1,    0,                       	    FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x1710, "Global Timeout",    	sizeof("Global Timeout") - 1,     0,                       	    FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x1711, "Decoding Timeout",  	sizeof("Decoding Timeout") - 1,   0,                       	    FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x1720, "Detection Field",   	sizeof("Detection field") - 1,    0,                       	    FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x1730, "Size Field",        	sizeof("Size Field") - 1,         0,                       	    FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x1740, "Split Value",       	sizeof("Split value") - 1,        0,                       	    FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+#endif  
 #if AVAILABLE_INTERFACES > 1
     /* Interface 1 description: SPI */
-    {0x2000, "Interface 1", 	  sizeof("Interface 1"), 		0, 				READ_ONLY_ACCESS | UNSIGNED_DATA, NULL,					NULL},
-    {0x2001, "Interface ID", 	  sizeof("Interface ID"), 	    	0, 				READ_ONLY_ACCESS | CHAR_DATA,		  NULL,					NULL},
-    {0x2002, "Interface Link",    sizeof("Interface Link"),     0, 											FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x2003, "Interface Type",    sizeof("Interface Type"),     0, 											FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x2004, "Interface State",   sizeof("Interface State"),    0, 			READ_ONLY_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x2200, "PHDL Fields",       sizeof("PHDL Fields"),        0,                       READ_ONLY_ACCESS | UNSIGNED_DATA, NULL,					NULL},
-    {0x2201, "Field 0",           sizeof("Field 0"),            0,                       READ_ONLY_ACCESS | UNSIGNED_DATA, NULL,					NULL},
-    {0x2300, "PHDL parameters",   sizeof("PHDL parameters"),    0,                       READ_ONLY_ACCESS | UNSIGNED_DATA, NULL,					NULL},
-    {0x2600, "Protocol Fields",   sizeof("Protocol Fields"),    0,                       FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x2601, "Field 0",           sizeof("Field 0"),            0,                       FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x2602, "Field 1",           sizeof("Field 1"),            0,                       FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x2603, "Field 2",           sizeof("Field 2"),            0,                       FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x2604, "Field 3",           sizeof("Field 3"),            0,                       FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x2605, "Field 4",           sizeof("Field 4"),            0,                       FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x2606, "Field 5",           sizeof("Field 5"),            0,                       FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x2607, "Field 6",           sizeof("Field 6"),            0,                       FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x2608, "Field 7",           sizeof("Field 7"),            0,                       FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x2609, "Field 8",           sizeof("Field 8"),            0,                       FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x260A, "Field 9",           sizeof("Field 9"),            0,                       FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x260B, "Field 10",          sizeof("Field 10"),           0,                       FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x260C, "Field 11",          sizeof("Field 11"),           0,                       FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x260D, "Field 12",          sizeof("Field 12"),           0,                       FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x260E, "Field 13",          sizeof("Field 13"),           0,                       FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x260F, "Field 14",          sizeof("Field 14"),           0,                       FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x2610, "Field 15",          sizeof("Field 15"),           0,                       FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x2700, "Frame Detection",   sizeof("Frame detection"),    0,                       FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x2701, "Field Detection",   sizeof("Field detection"),    0,                       FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x2710, "Global Timeout",    sizeof("Global Timeout"),     0,                       FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x2711, "Decoding Timeout",  sizeof("Decoding Timeout"),   0,                       FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x2720, "Detection Field",   sizeof("Detection field"),    0,                       FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x2730, "Size Field",        sizeof("Size Field"),         0,                       FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x2740, "Split Value",       sizeof("Split value"),        0,                       FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
+    {0x2000, "Interface 1", 	  sizeof("Interface 1") - 1, 		        0, 				                    READ_ONLY_ACCESS | UNSIGNED_DATA, NULL,					  NULL},
+    {0x2001, "Interface ID", 	  sizeof("Interface ID") - 1, 	    	  0, 				                    READ_ONLY_ACCESS | CHAR_DATA,		  NULL,					  NULL},
+    {0x2002, "Interface Link",    sizeof("Interface Link") - 1,       0, 											      FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x2003, "Interface Type",    sizeof("Interface Type") - 1,       0, 											      FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x2004, "Interface State",   sizeof("Interface State") - 1,      0, 			                      READ_ONLY_ACCESS | UNSIGNED_DATA, NULL,					  NULL},
+    {0x2200, "PHDL Fields",       sizeof("PHDL Fields") - 1,          0,                            READ_ONLY_ACCESS | UNSIGNED_DATA, NULL,					  NULL},
+    {0x2201, "Field 0",           sizeof("Field 0") - 1,              0,                            READ_ONLY_ACCESS | UNSIGNED_DATA, NULL,					  NULL},
+    {0x2300, "PHDL parameters",   sizeof("PHDL parameters") - 1,      0,                            READ_ONLY_ACCESS | UNSIGNED_DATA, NULL,					  NULL},
+    {0x2600, "Protocol Fields",   sizeof("Protocol Fields") - 1,      0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x2601, "Field 0",           sizeof("Field 0") - 1,              0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x2602, "Field 1",           sizeof("Field 1") - 1,              0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x2603, "Field 2",           sizeof("Field 2") - 1,              0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x2604, "Field 3",           sizeof("Field 3") - 1,              0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x2605, "Field 4",           sizeof("Field 4") - 1,              0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x2606, "Field 5",           sizeof("Field 5") - 1,              0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x2607, "Field 6",           sizeof("Field 6") - 1,              0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x2608, "Field 7",           sizeof("Field 7") - 1,              0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x2609, "Field 8",           sizeof("Field 8") - 1,              0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x260A, "Field 9",           sizeof("Field 9") - 1,              0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x260B, "Field 10",          sizeof("Field 10") - 1,             0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x260C, "Field 11",          sizeof("Field 11") - 1,             0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x260D, "Field 12",          sizeof("Field 12") - 1,             0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x260E, "Field 13",          sizeof("Field 13") - 1,             0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x260F, "Field 14",          sizeof("Field 14") - 1,             0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x2610, "Field 15",          sizeof("Field 15") - 1,             0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x2700, "Frame Detection",   sizeof("Frame detection") - 1,      0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x2701, "Field Detection",   sizeof("Field detection") - 1,      0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x2710, "Global Timeout",    sizeof("Global Timeout")- 1,        0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x2711, "Decoding Timeout",  sizeof("Decoding Timeout") - 1,     0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x2720, "Detection Field",   sizeof("Detection field") - 1,      0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x2730, "Size Field",        sizeof("Size Field") - 1,           0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x2740, "Split Value",       sizeof("Split value") - 1,          0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
 #endif
     /* Interface 2 description: USART */
 #if AVAILABLE_INTERFACES > 2
-    {0x3000, "Interface 2", 	    sizeof("Interface 2"), 	0,			READ_ONLY_ACCESS | UNSIGNED_DATA, NULL,					NULL},
-    {0x3001, "Interface ID", 	    sizeof("Interface ID"), 	0,			READ_ONLY_ACCESS | CHAR_DATA,	  NULL,					NULL},
-    {0x3002, "Interface Link",    sizeof("Interface Link"),     0,			FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x3003, "Interface Type",    sizeof("Interface Type"),     0,			FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x3004, "Attached Master",   sizeof("Attached Master"),    0, 			FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x300A, "Interface Opened",  sizeof("Interface Opened"),   0, 			FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x3200, "PHDL Fields",       sizeof("PHDL Fields"),        0,                      READ_ONLY_ACCESS | UNSIGNED_DATA, NULL,					NULL},
-    {0x3201, "Field 0",           sizeof("Field 0"),            0,                      READ_ONLY_ACCESS | UNSIGNED_DATA, NULL,					NULL},
-    {0x3300, "PHDL paramters",    sizeof("PHDL parameters"),    0,                      READ_ONLY_ACCESS | UNSIGNED_DATA, NULL,					NULL},
-    {0x3600, "Protocol Fields",   sizeof("Protocol Fields"),    0,                      FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x3601, "Field 0",           sizeof("Field 0"),            0,                      FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x3602, "Field 1",           sizeof("Field 1"),            0,                      FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x3603, "Field 2",           sizeof("Field 2"),            0,                      FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x3604, "Field 3",           sizeof("Field 3"),            0,                      FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x3605, "Field 4",           sizeof("Field 4"),            0,                      FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x3606, "Field 5",           sizeof("Field 5"),            0,                      FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x3607, "Field 6",           sizeof("Field 6"),            0,                      FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x3608, "Field 7",           sizeof("Field 7"),            0,                      FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x3609, "Field 8",           sizeof("Field 8"),            0,                      FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x360A, "Field 9",           sizeof("Field 9"),            0,                      FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x360B, "Field 10",          sizeof("Field 10"),           0,                      FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x360C, "Field 11",          sizeof("Field 11"),           0,                      FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x360D, "Field 12",          sizeof("Field 12"),           0,                      FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x360E, "Field 13",          sizeof("Field 13"),           0,                      FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x360F, "Field 14",          sizeof("Field 14"),           0,                      FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x3610, "Field 15",          sizeof("Field 15"),           0,                      FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x3700, "Frame Detection",   sizeof("Frame detection"),    0,                      FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x3701, "Field Detection",   sizeof("Field detection"),    0,                      FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x3710, "Global Timeout",    sizeof("Global Timeout"),     0,                      FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x3711, "Decoding Timeout",  sizeof("Decoding Timeout"),   0,                      FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x3720, "Detection Field",   sizeof("Detection field"),    0,                      FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x3730, "Size Field",        sizeof("Size Field"),         0,                      FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
-    {0x3740, "Split Value",       sizeof("Split value"),        0,                      FULL_ACCESS      | UNSIGNED_DATA, NULL,					NULL},
+    {0x3000, "Interface 2", 	    sizeof("Interface 2") - 1, 	        0,			                      READ_ONLY_ACCESS | UNSIGNED_DATA, NULL,					  NULL},
+    {0x3001, "Interface ID", 	    sizeof("Interface ID") - 1, 	      0,			                      READ_ONLY_ACCESS | CHAR_DATA,	  NULL,					    NULL},
+    {0x3002, "Interface Link",    sizeof("Interface Link") - 1,       0,			                      FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x3003, "Interface Type",    sizeof("Interface Type") - 1,       0,			                      FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x3004, "Interface State",   sizeof("Interface State") - 1,      0, 			                      FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x3200, "PHDL Fields",       sizeof("PHDL Fields") - 1,          0,                            READ_ONLY_ACCESS | UNSIGNED_DATA, NULL,					  NULL},
+    {0x3201, "Field 0",           sizeof("Field 0") - 1,              0,                            READ_ONLY_ACCESS | UNSIGNED_DATA, NULL,					  NULL},
+    {0x3300, "PHDL paramters",    sizeof("PHDL parameters") - 1,      0,                            READ_ONLY_ACCESS | UNSIGNED_DATA, NULL,					  NULL},
+    {0x3600, "Protocol Fields",   sizeof("Protocol Fields") - 1,      0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x3601, "Field 0",           sizeof("Field 0") - 1,              0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x3602, "Field 1",           sizeof("Field 1") - 1,              0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x3603, "Field 2",           sizeof("Field 2") - 1,              0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x3604, "Field 3",           sizeof("Field 3") - 1,              0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x3605, "Field 4",           sizeof("Field 4") - 1,              0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x3606, "Field 5",           sizeof("Field 5") - 1,              0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x3607, "Field 6",           sizeof("Field 6") - 1,              0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x3608, "Field 7",           sizeof("Field 7") - 1,              0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x3609, "Field 8",           sizeof("Field 8") - 1,              0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x360A, "Field 9",           sizeof("Field 9") - 1,              0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x360B, "Field 10",          sizeof("Field 10") - 1,             0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x360C, "Field 11",          sizeof("Field 11") - 1,             0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x360D, "Field 12",          sizeof("Field 12") - 1,             0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x360E, "Field 13",          sizeof("Field 13") - 1,             0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x360F, "Field 14",          sizeof("Field 14") - 1,             0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x3610, "Field 15",          sizeof("Field 15") - 1,             0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x3700, "Frame Detection",   sizeof("Frame detection") - 1,      0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x3701, "Field Detection",   sizeof("Field detection") - 1,      0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x3710, "Global Timeout",    sizeof("Global Timeout") - 1,       0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x3711, "Decoding Timeout",  sizeof("Decoding Timeout") - 1,     0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x3720, "Detection Field",   sizeof("Detection field") - 1,      0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x3730, "Size Field",        sizeof("Size Field") - 1,           0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
+    {0x3740, "Split Value",       sizeof("Split value") - 1,          0,                            FULL_ACCESS      | UNSIGNED_DATA, NULL,					  NULL},
 #endif
 
 #if   DEVICE_SUPPORT > 0
     /* Board support registers */
-    {0xA000, "Board LEDs",  	  sizeof("Board LEDs"), 	0,			FULL_ACCESS      | UNSIGNED_DATA, NULL, NULL},
+    {0xA000, "Board LEDs",  	    sizeof("Board LEDs") - 1, 	        0,			                      FULL_ACCESS      | UNSIGNED_DATA, NULL,           NULL},
 #endif
-    {0xFFFF, "Reset",  	    	  sizeof("Reset"),  		1,			WRITE_ONLY_ACCESS  | UNSIGNED_DATA, NULL, NULL}
+    {0xFFFF, "Reset",  	    	    sizeof("Reset") - 1,  		          1,			                      WRITE_ONLY_ACCESS| UNSIGNED_DATA, NULL,           NULL}
 };
 /* Private function prototypes -----------------------------------------------*/
 
@@ -229,23 +228,23 @@ ObjectRet ProcessObject(uint16_t RegisterID, uint8_t *TypeAccess, uint32_t *Size
 {
     ObjectRet ret;
     uint8_t *pDataTemp = *Data;		/* Temporal pointer for data access */
-    uint8_t *pReadTemp;						/* temporal pointer for read access */
+    uint8_t *pReadTemp = NULL;		/* temporal pointer for read access */
     uint32_t TempSize, TempFullReadSize;
-    uint16_t DictionaryIndex;
+    uint16_t LocalDictionaryIndex = 0;
     uint8_t CommandAccess = *TypeAccess, TempTypeAccess;
 
     /* Check if configuration object exists */
-    ret = CheckObjectIndex(RegisterID, &DictionaryIndex);
+    ret = CheckObjectIndex(RegisterID, &LocalDictionaryIndex);
 
     /* Check if the configuration object has to be written */
-    if(((CommandAccess & WRITE_DATA) != 0) && ((GetObjectType(DictionaryIndex) & WRITE_DATA) != 0))
+    if(((CommandAccess & WRITE_DATA) != 0) && ((GetObjectType(LocalDictionaryIndex) & WRITE_DATA) != 0))
     {
-      ret = WriteObjectData(DictionaryIndex, pDataTemp, *Size);
+      ret = WriteObjectData(LocalDictionaryIndex, pDataTemp, *Size);
 
       /* Execute callback if exists */
       if(ret == WRITE_DATA_SUCCESS)
       {
-        ExecuteObjectCallBack(DictionaryIndex);
+        ExecuteObjectCallBack(LocalDictionaryIndex);
         ret = OBJECT_SUCCESS;
       }
     }
@@ -262,10 +261,10 @@ ObjectRet ProcessObject(uint16_t RegisterID, uint8_t *TypeAccess, uint32_t *Size
     *Size = 0;
 
     /* Check if the configuration object has to be read */
-    if(((CommandAccess & READ_INFO) != 0) && ((GetObjectType(DictionaryIndex) & READ_INFO) != 0))
+    if(((CommandAccess & READ_INFO) != 0) && ((GetObjectType(LocalDictionaryIndex) & READ_INFO) != 0))
     {
       /* Use pReadTemp as temporal buffer */
-      ret = ReadObjectInfo( DictionaryIndex, &TempTypeAccess, &pReadTemp, &TempSize);
+      ret = ReadObjectInfo( LocalDictionaryIndex, &TempTypeAccess, &pReadTemp, &TempSize);
       if(ret == READ_INFO_SUCCESS)
       {
           *TypeAccess = TempTypeAccess;
@@ -289,18 +288,18 @@ ObjectRet ProcessObject(uint16_t RegisterID, uint8_t *TypeAccess, uint32_t *Size
           pReadTemp = NULL;
       }
     }
-    if(((CommandAccess & READ_DATA) != 0) && ((GetObjectType(DictionaryIndex) & READ_DATA) != 0))
+    if(((CommandAccess & READ_DATA) != 0) && ((GetObjectType(LocalDictionaryIndex) & READ_DATA) != 0))
     {
       TempFullReadSize = TempSize;
       /* Use pReadTemp as temporal buffer */
-      ret = ReadObjectData( DictionaryIndex, &pReadTemp, &TempSize);
+      ret = ReadObjectData( LocalDictionaryIndex, &pReadTemp, &TempSize);
       if(ret == READ_DATA_SUCCESS)
       {
           /* If a read info has been executed, copy new data at the end of the
            * pDataTemp buffer */
           if(pDataTemp != NULL)
           {
-            pDataTemp = (uint8_t *)MemRealloc(pDataTemp, (Dictionary[DictionaryIndex].size + TempFullReadSize)*sizeof(uint8_t));
+            pDataTemp = (uint8_t *)MemRealloc(pDataTemp, (Dictionary[LocalDictionaryIndex].size + TempFullReadSize)*sizeof(uint8_t));
             *Data = pDataTemp;
             pDataTemp += TempFullReadSize;
           }
@@ -486,22 +485,22 @@ ObjectRet ReadObjectInfo(uint16_t DictionaryIndex, uint8_t *TypeAccess, uint8_t 
 
     if(pTemp == NULL)
     {
-	ret = INCORRECT_SIZE;
-	*Size = 0;
+      ret = INCORRECT_SIZE;
+      *Size = 0;
     }
     else
     {
-	*Data = pTemp;
-	/* Copy object size */
-	pTemp[OBJECT_SIZE_INDEX_HIGH] = (uint8_t)((Dictionary[DictionaryIndex].size >> 8) & 0x00FF);
-	pTemp[OBJECT_SIZE_INDEX_LOW] = (uint8_t)(Dictionary[DictionaryIndex].size & 0x00FF);
-	pTemp += OBJECT_SIZE;
+      *Data = pTemp;
+      /* Copy object size */
+      pTemp[OBJECT_SIZE_INDEX_HIGH] = (uint8_t)((Dictionary[DictionaryIndex].size >> 8) & 0x00FF);
+      pTemp[OBJECT_SIZE_INDEX_LOW] = (uint8_t)(Dictionary[DictionaryIndex].size & 0x00FF);
+      pTemp += OBJECT_SIZE;
 	
-	/* Copy object description */
-	memcpy(pTemp, Dictionary[DictionaryIndex].name, Dictionary[DictionaryIndex].nameSize);
+      /* Copy object description */
+      memcpy(pTemp, Dictionary[DictionaryIndex].name, Dictionary[DictionaryIndex].nameSize);
 	
-	/* return the size of the generated data bufer */
-	*Size = TempSize;
+      /* return the size of the generated data bufer */
+      *Size = TempSize;
     }
 
     return ret;

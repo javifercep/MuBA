@@ -164,7 +164,7 @@ int32_t InitBUSProcess(void)
 void LaunchBUSInstance(uint8_t BusInstanceID)
 {
   uint32_t FuncRet;
-  CreateThread (FuncRet, ThreadIDBUSWriteProcess[BusInstanceID],THREAD_REF(BUSWriteProcess), &(InstanceID[BusInstanceID]));
+  CreateThread (FuncRet, ThreadIDBUSReadProcess[BusInstanceID],THREAD_REF(BUSReadProcess), &(InstanceID[BusInstanceID]));
   if(!FuncRet)
   {
 	  /* Handle Erro */
@@ -178,7 +178,7 @@ void LaunchBUSInstance(uint8_t BusInstanceID)
   *	     received to / from the MBA instance and the linked Bus.
   * @param[in] 	argument Bus identification
   */
-OS_THREAD_TYPE BUSWriteProcess (OS_THREAD_ARG argument)
+OS_THREAD_TYPE BUSReadProcess (OS_THREAD_ARG argument)
 {
   uint8_t *BusBuffer; 	/* Temporal buffer to save data from/to linked bus */
   uint32_t FrameSize, FuncRet;	/* Saves size of the received/transmitted frames */
@@ -197,12 +197,12 @@ OS_THREAD_TYPE BUSWriteProcess (OS_THREAD_ARG argument)
       BusInstances[BUSId].DeInit();
       ForceBusInterfaceStop(BUSId);
       TransferProtocolUpdateInterfaceState(BUSId);
-      ForceStopThread(FuncRet, ThreadIDBUSWriteProcess[BUSId]);
+      ForceStopThread(FuncRet, ThreadIDBUSReadProcess[BUSId]);
   }
   else
   {
     /* Once the Interface is enabled, launch the read process */
-    CreateThread (FuncRet, ThreadIDBUSReadProcess[BUSId],THREAD_REF(BUSReadProcess),&(InstanceID[BUSId]));
+    CreateThread (FuncRet, ThreadIDBUSWriteProcess[BUSId],THREAD_REF(BUSWriteProcess),&(InstanceID[BUSId]));
     if(!FuncRet)
     {
   	/* handle Error */
@@ -267,7 +267,7 @@ OS_THREAD_TYPE BUSWriteProcess (OS_THREAD_ARG argument)
   *		        received to / from the MBA instance and the linked Bus.
   * @param[in] 	argument Bus identification
   */
-OS_THREAD_TYPE BUSReadProcess (OS_THREAD_ARG argument)
+OS_THREAD_TYPE BUSWriteProcess (OS_THREAD_ARG argument)
 {
   uint8_t *BusBuffer; 	/* Temporal buffer to save data from/to linked bus */
   uint32_t FrameSize;	/* Saves size of the received/transmitted frames */

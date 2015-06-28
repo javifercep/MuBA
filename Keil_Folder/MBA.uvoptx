@@ -196,34 +196,34 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>351</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134224902</Address>
+          <LineNumber>116</LineNumber>
+          <EnabledFlag>0</EnabledFlag>
+          <Address>134219648</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\SourceCode\PHDLLAYER\BUSAPI\USARTAPI\USARTAPI.c</Filename>
+          <Filename>..\SourceCode\APPLAYER\Communication\MBAApp.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression></Expression>
+          <Expression>\\MuBA\../SourceCode/APPLAYER/Communication/MBAApp.c\116</Expression>
         </Bp>
         <Bp>
           <Number>1</Number>
           <Type>0</Type>
-          <LineNumber>310</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134224894</Address>
+          <LineNumber>295</LineNumber>
+          <EnabledFlag>0</EnabledFlag>
+          <Address>134219334</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\SourceCode\PHDLLAYER\BUSAPI\USARTAPI\USARTAPI.c</Filename>
+          <Filename>..\SourceCode\APPLAYER\Communication\BUSApp.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\MuBA\../SourceCode/PHDLLAYER/BUSAPI/USARTAPI/USARTAPI.c\310</Expression>
+          <Expression>\\MuBA\../SourceCode/APPLAYER/Communication/BUSApp.c\295</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -247,7 +247,7 @@
         <Mm>
           <WinNumber>1</WinNumber>
           <SubType>8</SubType>
-          <ItemText>SendBuffer</ItemText>
+          <ItemText>TPOut</ItemText>
           <AccSizeX>0</AccSizeX>
         </Mm>
       </MemoryWindow1>
@@ -255,7 +255,7 @@
         <Mm>
           <WinNumber>2</WinNumber>
           <SubType>8</SubType>
-          <ItemText>Dictionary[DictionaryIndex]</ItemText>
+          <ItemText>TPOut-&gt;Data</ItemText>
           <AccSizeX>0</AccSizeX>
         </Mm>
       </MemoryWindow2>
@@ -263,7 +263,7 @@
         <Mm>
           <WinNumber>3</WinNumber>
           <SubType>10</SubType>
-          <ItemText>Dictionary[DictionaryIndex]</ItemText>
+          <ItemText>pBuf</ItemText>
           <AccSizeX>0</AccSizeX>
         </Mm>
       </MemoryWindow3>
@@ -790,6 +790,22 @@
           <ExecCommand></ExecCommand>
           <Expression></Expression>
         </Bp>
+        <Bp>
+          <Number>21</Number>
+          <Type>0</Type>
+          <LineNumber>116</LineNumber>
+          <EnabledFlag>0</EnabledFlag>
+          <Address>0</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>0</BreakIfRCount>
+          <Filename>..\SourceCode\APPLAYER\Communication\MBAApp.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression></Expression>
+        </Bp>
       </Breakpoint>
       <Tracepoint>
         <THDelay>0</THDelay>
@@ -952,7 +968,7 @@
 
   <Group>
     <GroupName>MBALIBRARY</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -1548,7 +1564,7 @@
 
   <Group>
     <GroupName>SYSTEMFILES</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
